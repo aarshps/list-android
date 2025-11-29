@@ -43,8 +43,8 @@ jobs:
           echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android/app/my-upload-key.keystore
 
       - name: Build APK
-        cd android
         run: ./gradlew assembleRelease
+        working-directory: android
         env:
           ORG_GRADLE_PROJECT_MYAPP_UPLOAD_STORE_FILE: my-upload-key.keystore
           ORG_GRADLE_PROJECT_MYAPP_UPLOAD_STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
