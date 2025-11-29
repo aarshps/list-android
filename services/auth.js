@@ -1,7 +1,7 @@
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import { useEffect, useState } from 'react';
-import { GOOGLE_CLIENT_ID, SCOPES } from './auth-config';
+import { GOOGLE_CLIENT_ID, ANDROID_CLIENT_ID, SCOPES } from './auth-config';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -11,9 +11,8 @@ export const useGoogleAuth = () => {
 
     const [request, response, promptAsync] = Google.useAuthRequest({
         clientId: GOOGLE_CLIENT_ID,
+        androidClientId: ANDROID_CLIENT_ID,
         scopes: SCOPES,
-        // For Expo Go, we often need to specify the redirect URI explicitly if auto-discovery fails,
-        // but usually it works with the default proxy.
     });
 
     useEffect(() => {
