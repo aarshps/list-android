@@ -30,7 +30,7 @@ This project is configured to build a release APK using GitHub Actions.
     -   SHA-1: Use the value from `secrets.txt`.
 
 ### Build
--   Push to `main` branch to trigger the **Build Android APK** workflow.
+-   Go to **Actions** tab, select **Build Android APK**, and click **Run workflow**.
 -   Download the APK from **Releases** or Action artifacts.
 
 ## Development
