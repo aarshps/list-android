@@ -36,7 +36,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Prebuild
-        run: npx expo prebuild --platform android --no-interactive
+        run: npx expo prebuild --platform android
 
       - name: Decode Keystore
         run: |

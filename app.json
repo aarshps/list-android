@@ -3,6 +3,7 @@
     "name": "list-android",
     "slug": "list-android",
     "version": "1.0.0",
+    "scheme": "listandroid",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
